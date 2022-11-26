@@ -1,0 +1,41 @@
+
+.row {
+    direction: rtl;
+}
+table{
+    direction: rtl;
+}
+
+.table-head {
+    background-color: var(--main-color);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.table-head h3{
+    font-size: 24px;
+    padding: 15px 0;
+    margin: 0;
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+}
+
+table tr{
+    text-align: center;
+    height: 50px;
+}
+
+table td {
+    vertical-align: middle;
+    font-weight: 500;
+}
+tbody img {
+    width:40px;
+    height: 30px;
+    border-radius: 50%;
+}

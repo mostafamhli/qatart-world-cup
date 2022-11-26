@@ -1,0 +1,43 @@
+
+<header>
+    <div id="header" class="bg-primary">
+        <div class="background-header">
+            <div class="p-5 mr-5 header-content" style="direction: rtl;">
+                <h1>كأس</h1>
+                <h1>العالم</h1>
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <img ngSrc="../../../assets/img/logo.png" width="120" height="50"  alt="Qatar FIFA World cup's Logo"  priority/>
+    </div>
+</header>
+
+<div class="d-flex justify-content-center qatar-word">
+  <img ngSrc="../../../assets/img/qatar-word.png" width="50" height="50"  alt="كأس العالم قطر"  priority/>
+</div>
+
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link" aria-current="page" routerLink="/">المجموعات</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="today">مباريات اليوم</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="yesterday">مباريات الأمس</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="previous">جميع المباريات السابقة</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

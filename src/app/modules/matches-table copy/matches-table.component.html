@@ -1,0 +1,29 @@
+<div class="container main-content" *ngIf="todayMatches">
+    <div *ngFor="let match of todayMatches ; trackBy:match" class="match">
+        <div class="groupName">{{match.group}} - {{ (match.status==='TIMED') ? (match.utcDate | date:'shortTime') : (match.status==='FINISHED')? 'انتهت' : (match.status==='IN_PLAY') ? 'تلعب الآن' :  'منتصف المبارة'}}</div>
+        <div class="content">
+            <div class="homeTeam" matTooltip="{{match.homeTeam.name}}">
+                <div class="homeTeamImg">
+                    <img ngSrc="{{match.homeTeam.crest}}" width="10" height="10" alt="Flag of the country participating in the World Cup Qatar2022" priority />
+                </div>
+                <div class="score">
+                    <div *ngIf="match.status === 'TIMED';">_</div>
+                    <div *ngIf="match.status !== 'TIMED';">{{match.score.fullTime.home}}</div>
+                </div>
+            </div>
+            <div class="vs-word">
+                <div>VS</div>
+                <span *ngIf="match.status === 'IN_PLAY'" class="linear-lines reduce"></span>
+            </div>
+            <div class="awayTeam" matTooltip="{{match.awayTeam.name}}">
+                <div class="score">
+                    <div *ngIf="match.status === 'TIMED';">_</div>
+                    <div *ngIf="match.status !== 'TIMED';">{{match.score.fullTime.away}}</div>
+                </div>
+                <div class="awayTeamImg">
+                    <img ngSrc="{{match.awayTeam.crest}}" width="10" height="15"  alt="Flag of the country participating in the World Cup Qatar2022"  priority/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

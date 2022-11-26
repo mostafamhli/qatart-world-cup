@@ -1,0 +1,26 @@
+<div class="container main-content" *ngIf="yesterdayMatches">
+    <div *ngFor="let match of yesterdayMatches ; trackBy:match" class="match">
+        <div class="groupName">{{match.group}}</div>
+        <div class="content">
+            <div class="homeTeam" matTooltip="{{match.homeTeam.name}}">
+                <div class="homeTeamImg">
+                    <img ngSrc="{{match.homeTeam.crest}}" width="10" height="15"  alt="Flag of the country participating in the World Cup Qatar2022"  priority/>
+                </div>
+                <div class="score">
+                    {{match.score.fullTime.home}}
+                </div>
+            </div>
+            <div class="vs-word">
+                VS
+            </div>
+            <div class="awayTeam" matTooltip="{{match.awayTeam.name}}">
+                <div class="score">
+                    {{match.score.fullTime.away}}
+                </div>
+                <div class="awayTeamImg">
+                    <img ngSrc="{{match.awayTeam.crest}}" width="10" height="15"  alt="Flag of the country participating in the World Cup Qatar2022"  priority/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

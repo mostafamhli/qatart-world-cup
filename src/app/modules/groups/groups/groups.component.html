@@ -1,0 +1,35 @@
+
+<div class="container mt-5">
+    <div class="row">
+      <div *ngFor="let standing of standings ; trackBy:standing" class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mx-auto" style="margin-bottom: 50px;">
+        <div class="table-head">
+          <h3>{{standing.group}}</h3>
+        </div>
+        <table class="table table-hover p-5">
+          <thead>
+            <tr>
+              <th scope="col">الفريق</th>
+              <th scope="col">لعب</th>
+              <th scope="col">فاز</th>
+              <th scope="col">تعادل</th>
+              <th scope="col">خسر</th>
+              <th scope="col">النقاط</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let teams of standing.table ; trackBy:teams" matTooltip="{{teams.team.name}}"
+            aria-label="Button that displays a tooltip when focused or hovered over">
+              <th scope="row">
+                <img ngSrc="{{teams.team.crest}}" width="10" height="15"  alt="Flag of the country participating in the World Cup Qatar2022"  priority/>
+              </th>
+              <td>{{teams.playedGames}}</td>
+              <td>{{teams.won}}</td>
+              <td>{{teams.draw}}</td>
+              <td>{{teams.lost}}</td>
+              <td>{{teams.points}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
