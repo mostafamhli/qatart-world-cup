@@ -17,7 +17,7 @@ export class MatchesService {
 
   getComData():Observable<RootObject> {
     console.log(headers)
-    return this.http.get<RootObject>('/standings',{ 'headers': headers });
+    return this.http.get<RootObject>('https://api.football-data.org/v4/competitions/2000/standings',{ 'headers': headers });
   }
 
   getTodatMatches(dateFrom:string,dateTo:string):Observable<RootObject> {
@@ -26,7 +26,7 @@ export class MatchesService {
       dateTo: dateTo
     };
 
-    return this.http.get<RootObject>('/matches',{headers:headers, params:options})
+    return this.http.get<RootObject>('https://api.football-data.org/v4/competitions/2000/matches',{headers:headers, params:options})
   }
 
 }
